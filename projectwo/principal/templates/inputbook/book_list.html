@@ -1,0 +1,42 @@
+<!-- inputbook/book_list.html -->
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+<!-- Navbar con login -->
+{% include 'navbar/navbar.html' %}
+
+<!-- Título del listado de libros -->
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Listado de Libros</h1>
+
+    <!-- Tabla de libros con Bootstrap -->
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Valoración</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.rating }}</td>
+                    
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center">No hay libros disponibles</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+
+  

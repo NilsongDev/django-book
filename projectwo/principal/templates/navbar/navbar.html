@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Site Web Django</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/principal/">Inicio</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="/inputbook/books/">Libros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+           
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">dev</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <span class="navbar-text me-3">Bienvenido, {{ user.username }}</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'inputbook' %}">Agregar Libro</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'registro_usuario' %}">Registrarse</a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>

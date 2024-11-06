@@ -15,3 +15,8 @@ env/
 __pycache__/
 *.pyc
 *.pyo
+
+
+
+
+django-development/

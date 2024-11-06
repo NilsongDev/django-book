@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "layout.html" %} 
+{% include 'navbar/navbar.html' %}
+
+
+{% block content %}
+<h1>Agregar Detalles de libro</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Enviar</button>
+</form>
+
+{% endblock %}
