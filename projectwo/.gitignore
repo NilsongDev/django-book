@@ -1,0 +1,17 @@
+# Ignorar el archivo de base de datos SQLite
+db.sqlite3
+
+# Ignorar todas las migraciones
+*/migrations/
+
+# Ignorar configuraciones de VSCode
+.vscode/
+
+# Ignorar archivos de entorno virtual
+env/
+.venv/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
